@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    height: 1000px;
+    width: 1000px;
+    border: solid;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+}
+
+.box {
+    border: solid;
+    border-width: 1px;
+    border-color: lightslategray;
+    height: auto;
+    width: auto;
+    flex: 1;
+}
+
