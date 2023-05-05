@@ -13,7 +13,7 @@ row.append(div);
 
 
 // Function that creates nxn grid
-n = 30;
+n = 40;
 
 function makeGrid(n) {
     for (i=1;i<n;i++) {
@@ -27,6 +27,7 @@ function makeGrid(n) {
 makeGrid(n);
 
 
+
 // Function to add color attribute to boxes on hover
 boxes = document.querySelectorAll('.box');
 
@@ -35,4 +36,42 @@ boxes.forEach(box =>{
         box.setAttribute('style','background-color: black')
     })
 })
-       
+
+
+// Reset Button 
+reset = document.querySelector('.reset');
+reset.addEventListener('click',resetGrid)
+
+function resetGrid() {
+    boxes.forEach(box => box.setAttribute('style','background-color: white'))
+}
+
+
+//Grid Size Button
+gridSize = document.querySelector('.gridsize')
+gridSize.addEventListener('click',changeGridSize)
+
+
+function changeGridSize() {
+    n = prompt('Enter the number of squares per side')
+
+    if (n>100) {n=100}
+    
+    boxes.forEach(box => box.remove())
+    rows = document.querySelectorAll('.row');
+    rows.forEach(row => row.remove());
+
+    container.append(row);
+    row.append(div);
+
+    makeGrid(n);
+
+    boxes = document.querySelectorAll('.box');
+
+    boxes.forEach(box =>{
+        box.addEventListener('mouseover', function handleClick(e){
+            box.setAttribute('style','background-color: black')
+        })
+    })
+    
+}

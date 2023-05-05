@@ -1,13 +1,40 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+    background-color: #263849;
+    
 }
+
+button {
+    font-size: 25px;
+    background-color: #dfcdc3;
+    font-family: 'Copperplate', Arial, Helvetica, sans-serif;
+    
+}
+
+.inputs {
+    display: flex;
+    gap: 30px;
+}
+
+.title {
+    font-family: 'Copperplate', Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    color: #dfcdc3;
+}
+
 
 .container {
     display: flex;
-    height: 1000px;
-    width: 1000px;
+    height: 600px;
+    width: 600px;
     border: solid;
+    border-color: black;
+    border-width: 8px;
     flex-direction: column;
 }
 
@@ -23,6 +50,7 @@ body {
     height: auto;
     width: auto;
     flex: 1;
+    background-color: white;
 }
 
 
